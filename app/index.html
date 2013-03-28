@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>Mykzilla</title>
+  <meta charset="utf-8">
+  <script type="text/javascript" src="app.js"></script>
+</head>
+
+<body>
+  Mykzilla
+  <button onclick="navigator.mozApps.install('http://mykzilla.org/app/manifest.webapp', { receipts: ['receipt'] })">install app</button>
+  <button onclick="installRedirectImmediately()">call install, then redirect immediately</button>
+  <button onclick="installRedirectEventually()">call install, then redirect after one second</button>
+  <a href="https://bugzilla.mozilla.org/attachment.cgi?id=208471">crash Windows</a>
+  <a href="http://pe.usps.com/mpdesign/mac/MABRMCrd/am46.ai">crash Mac</a>
+  |
+  <a href="http://www.mozilla.org/firefox/its-a-trap.html">phishing</a>
+  <a href="http://www.mozilla.org/firefox/its-an-attack.html">malware</a>
+  |
+  <a href="http://people.mozilla.com/~myk/apps/">App Cacher</a>
+  <a href="http://people.mozilla.com/~myk/apps/test.html">other origin</a>
+  <a href="http://mainline.brynmawr.edu/Courses/cs110/spring2002/Applets/Examples.html">Java applets</a>
+
+  <script type="text/javascript">
+    function installRedirectImmediately() {
+      navigator.mozApps.install('http://mykzilla.org/app/manifest.webapp', { receipts: ['receipt'] });
+      document.location = "about:blank";
+    }
+    function installRedirectEventually() {
+      navigator.mozApps.install('http://mykzilla.org/app/manifest.webapp', { receipts: ['receipt'] });
+      window.setTimeout(function() document.location = "about:blank", 1000);
+    }
+  </script>
+
+  <button onclick="geolocate()">geolocate</button>
+
+</body>
+</html>

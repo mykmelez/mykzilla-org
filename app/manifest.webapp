@@ -1,0 +1,28 @@
+{
+  "name": "Mykzilla",
+  "launch_path": "/app",
+  "description": "an app for testing various aspects of the Open Web Apps architecture",
+  "developer": {
+    "name": "Myk Melez",
+    "url": "http://mykzilla.org/"
+  },
+  "icons": {
+    "128": "/app/img/icon-128.png"
+  },
+  "permissions": {
+    "geolocation": {
+      "description": "required in order to test geolocation"
+    }
+  },
+  "default_locale": "en-US",
+  "locales": {
+    "en-US": {
+      "name": "Mykzilla",
+      "description": "an app for testing various aspects of the Open Web Apps architecture",
+      "developer": {
+        "name": "Myk Melez",
+        "url": "http://mykzilla.org/"
+      }
+    }
+  }
+}

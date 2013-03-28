@@ -1,0 +1,24 @@
+{
+  "name": "HostStubTest",
+  "description": "a hosted app for testing stubs",
+  "launch_path": "/",
+  "developer": {
+    "name": "Myk Melez",
+    "url": "http://mykzilla.org/"
+  },
+  "icons": {
+    "64": "/icon-64.png",
+    "128": "/icon-128.png"
+  },
+  "default_locale": "en-US",
+  "locales": {
+    "en-US": {
+      "name": "HostStubTest",
+      "description": "a hosted app for testing stubs",
+      "developer": {
+        "name": "Myk Melez",
+        "url": "http://mykzilla.org/"
+      }
+    }
+  }
+}
