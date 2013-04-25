@@ -1,1 +1,6 @@
 RedirectMatch 307 ^/$ http://mykzilla.blogspot.com/
+
+AddType application/x-web-app-manifest+json .webapp
+
+# Test adding a charset parameter to the Content-Type response header.
+#AddCharset ISO-8859-4 .webapp
