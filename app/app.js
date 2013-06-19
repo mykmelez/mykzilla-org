@@ -1,6 +1,8 @@
 function geolocate() {
   navigator.geolocation.watchPosition(function(position) {
-    var text = document.createTextNode(position.coords.latitude + " x " + position.coords.longitude);
+    var coords = position.coords.latitude + " x " + position.coords.longitude;
+    console.log(coords);
+    var text = document.createTextNode(coords);
     var div = document.createElement("div");
     div.appendChild(text);
     document.body.appendChild(div);
@@ -8,5 +10,7 @@ function geolocate() {
 }
 
 function screamScreen() {
-  alert("screen: " + window.screen.width + "x" + window.screen.height);
+  var screen = window.screen.width + " x " + window.screen.height;
+  console.log(screen);
+  alert(screen);
 }
