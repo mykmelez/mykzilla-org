@@ -14,3 +14,7 @@ function screamScreen() {
   console.log(screen);
   alert(screen);
 }
+
+function goTo(url) {
+  window.location = url;
+}
