@@ -15,6 +15,11 @@ function screamScreen() {
   alert(screen);
 }
 
-function goTo(url) {
-  window.location = url;
+function goTo(url, openInNewWindow) {
+  if (openInNewWindow) {
+    window.open(url);
+  }
+  else {
+    window.location = url;
+  }
 }
