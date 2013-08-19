@@ -25,28 +25,27 @@ function goTo(url, openInNewWindow) {
 }
 
 function getMedia() {
-  navigator.getMedia = (navigator.getUserMedia ||
-                        navigator.webkitGetUserMedia ||
-                        navigator.mozGetUserMedia ||
-                        navigator.msGetUserMedia);
-  
+  navigator.getMedia = navigator.getUserMedia ||
+                       navigator.webkitGetUserMedia ||
+                       navigator.mozGetUserMedia ||
+                       navigator.msGetUserMedia;
+
   navigator.getMedia (
-     {
-        video: true,
-        audio: true
-     },
-  
-     function(localMediaStream) {
-        var video = document.querySelector('video');
-        video.src = window.URL.createObjectURL(localMediaStream);
-        video.onloadedmetadata = function(e) {
-           video.play();
-        };
-     },
-  
-     function(err) {
-      console.log("The following error occured: " + err);
-     }
-  
+    {
+      video: true,
+      audio: true
+    },
+
+    function(localMediaStream) {
+      var video = document.querySelector('video');
+      video.src = window.URL.createObjectURL(localMediaStream);
+      video.onloadedmetadata = function(e) {
+        video.play();
+      };
+    },
+
+    function(error) {
+      alert("Error getting user media: " + error);
+    }
   );
 }
