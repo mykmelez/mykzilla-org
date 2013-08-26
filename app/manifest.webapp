@@ -15,6 +15,7 @@
     }
   },
   "default_locale": "en-US",
+  "fullscreen": true,
   "locales": {
     "en-US": {
       "name": "Mykzilla",
