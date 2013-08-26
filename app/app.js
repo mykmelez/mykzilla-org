@@ -49,3 +49,9 @@ function getMedia() {
     }
   );
 }
+
+function loop() {
+  while (1) {
+    //code
+  }
+}
