@@ -61,7 +61,7 @@ function install() {
   document.getElementById("throbber").style.visibility = "visible";
   request.onsuccess = function() {
     document.getElementById("throbber").style.visibility = "hidden";
-    alert("success! " + JSON.stringify(this.result));
+    alert("success!\n\n" + [(p + "=" + this.result[p]) for (p in this.result)].join("\n"));
   }
   request.onerror = function() {
     document.getElementById("throbber").style.visibility = "hidden";
