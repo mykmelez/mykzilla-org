@@ -55,3 +55,13 @@ function loop() {
     //code
   }
 }
+
+function install() {
+  var request = navigator.mozApps.install('http://mykzilla.org/app/manifest.webapp', { receipts: ['receipt'] });
+  request.onsuccess = function() {
+    alert("success! " + JSON.stringify(this.result));
+  }
+  request.onerror = function() {
+    alert("failure! " + this.error.name);
+  }
+}

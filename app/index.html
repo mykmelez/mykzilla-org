@@ -9,7 +9,7 @@
 
 <body>
   Mykzilla
-  <button onclick="navigator.mozApps.install('http://mykzilla.org/app/manifest.webapp', { receipts: ['receipt'] })">install app</button>
+  <button onclick="install()">install app</button>
   <button onclick="installRedirectImmediately()">call install, then redirect immediately</button>
   <button onclick="installRedirectEventually()">call install, then redirect after one second</button>
   <button onclick="loop()">Loop</button>
