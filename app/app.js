@@ -61,10 +61,14 @@ function install() {
   document.getElementById("throbber").style.visibility = "visible";
   request.onsuccess = function() {
     document.getElementById("throbber").style.visibility = "hidden";
-    alert("success!\n\n" + [(p + "=" + this.result[p]) for (p in this.result)].join("\n"));
+    var message = "success!\n\n" + [(p + "=" + this.result[p]) for (p in this.result)].join("\n");
+    console.log(message);
+    alert(message);
   }
   request.onerror = function() {
     document.getElementById("throbber").style.visibility = "hidden";
-    alert("failure! " + this.error.name);
+    var message = "failure! " + this.error.name;
+    console.log(message);
+    alert(message);
   }
 }
