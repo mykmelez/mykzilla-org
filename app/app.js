@@ -58,10 +58,13 @@ function loop() {
 
 function install() {
   var request = navigator.mozApps.install('http://mykzilla.org/app/manifest.webapp', { receipts: ['receipt'] });
+  document.getElementById("throbber").style.visibility = "visible";
   request.onsuccess = function() {
+    document.getElementById("throbber").style.visibility = "hidden";
     alert("success! " + JSON.stringify(this.result));
   }
   request.onerror = function() {
+    document.getElementById("throbber").style.visibility = "hidden";
     alert("failure! " + this.error.name);
   }
 }
