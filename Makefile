@@ -6,7 +6,7 @@ help:
 	@echo '  pull:   pull files from the website; overwrites local changes'
 
 push:
-	rsync -av --exclude-from=.exclude ./ melez.com:public_html/mykzilla/
+	rsync -av --exclude-from=.exclude ./ melez.com:public_html/melez/mykzilla/
 
 pull:
-	rsync -av melez.com:public_html/mykzilla/ ./
+	rsync -av melez.com:public_html/melez/mykzilla/ ./
