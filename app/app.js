@@ -15,13 +15,16 @@ function screamScreen() {
   alert(screen);
 }
 
-function goTo(url, openInNewWindow) {
-  if (openInNewWindow) {
+function goTo(url) {
+  window.location = url;
+}
+
+function openInNewWindow(url) {
     window.open(url);
-  }
-  else {
-    window.location = url;
-  }
+}
+
+function openInNewBlankWindow(url) {
+    window.open(url, "_blank");
 }
 
 function getMedia() {
@@ -57,7 +60,7 @@ function loop() {
 }
 
 function install() {
-  var request = navigator.mozApps.install('http://mykzilla.org/app/manifest.webapp', { receipts: ['receipt'] });
+  var request = navigator.mozApps.install('http://mykzilla.org/app/manifest.webapp', ['receipt']);
   document.getElementById("throbber").style.visibility = "visible";
   request.onsuccess = function() {
     document.getElementById("throbber").style.visibility = "hidden";

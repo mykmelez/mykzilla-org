@@ -49,7 +49,8 @@
 
   <input id="url">
   <button onclick="goTo(document.getElementById('url').value)">Go</button>
-  <button onclick="goTo(document.getElementById('url').value, true)">Go New Window</button>
+  <button onclick="openInNewWindow(document.getElementById('url').value)">Open In New Window</button>
+  <button onclick="openInNewBlankWindow(document.getElementById('url').value)">Open In New Blank Window</button>
   <button onclick="location.reload()">Reload</button>
 
   <button onclick="getMedia()">Get Media</button>
