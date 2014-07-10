@@ -10,7 +10,8 @@
 
 <body>
   Mykzilla
-  <button onclick="install()">install app</button>
+  <button onclick="install('manifest.webapp')">install app</button>
+  <button onclick="install('manifest2.webapp')">install app2</button>
   <img id="throbber" src="img/throbber.gif" style="visibility: hidden">
   <button onclick="installRedirectImmediately()">call install, then redirect immediately</button>
   <button onclick="installRedirectEventually()">call install, then redirect after one second</button>

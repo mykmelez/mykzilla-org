@@ -59,8 +59,8 @@ function loop() {
   }
 }
 
-function install() {
-  var request = navigator.mozApps.install('http://mykzilla.org/app/manifest.webapp', ['receipt']);
+function install(manifestName) {
+  var request = navigator.mozApps.install('http://mykzilla.org/app/' + manifestName, ['receipt']);
   document.getElementById("throbber").style.visibility = "visible";
   request.onsuccess = function() {
     document.getElementById("throbber").style.visibility = "hidden";
