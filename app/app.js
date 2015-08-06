@@ -64,16 +64,26 @@ function install(manifestName) {
   document.getElementById("throbber").style.visibility = "visible";
   request.onsuccess = function() {
     document.getElementById("throbber").style.visibility = "hidden";
-    var message = "success!\n\n" + [(p + "=" + this.result[p]) for (p in this.result)].join("\n");
-    console.log(message);
-    alert(message);
+    alert('App installed successfully!');
   }
   request.onerror = function() {
     document.getElementById("throbber").style.visibility = "hidden";
-    var message = "failure! " + this.error.name;
-    console.log(message);
-    alert(message);
+    alert('Error installing app: ' + this.error.name);
   }
+}
+
+function launch() {
+  var request = navigator.mozApps.checkInstalled('http://mykzilla.org/app/manifest.webapp');
+  request.onsuccess = function() {
+    if (request.result) {
+      request.result.launch();
+    } else {
+      alert('App is not installed.');
+    }
+  };
+  request.onerror = function() {
+    alert('Error launching app: ' + this.error.name);
+  };
 }
 
 function useDeviceStorage() {
